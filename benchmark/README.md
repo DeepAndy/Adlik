@@ -155,3 +155,16 @@ parameters used in the test are as follows:
 | TF Serving2.1  `CPU` |             4.622              |                 4.752                  |              0.00589              |
 | TF Serving2.2  `CPU` |             3.752              |                 3.854                  |              0.00704              |
 | TF Serving2.1  `GPU` |            107.667             |                291.931                 |              0.00586              |
+
+### The test result of the YoloV3 model using TensorRT runtime
+
+#### The test result of YoloV3 model based on trained weights and config
+
+config: https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov3.cfg
+weights: https://pjreddie.com/media/files/yolov3.weights
+
+|                      | speed of client (pictures/sec) | speed of serving engine (pictures/sec) | tail latency of one picture (sec) |
+| -------------------- | :----------------------------: | :------------------------------------: | :-------------------------------: |
+| Yolov3-320     `GPU` |            59.574              |                 212.705                |              0.01208              |
+| YoloV3-416     `GPU` |            35.760              |                 133.017                |              0.02045              |
+| YoloV3-608     `GPU` |            16.164              |                 62.893                 |              0.04597              |
